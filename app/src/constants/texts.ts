@@ -12,3 +12,6 @@ export const GOOD_LOCK = 'GOOD_LOCK';
 export const GET_THE_TRANSACTIONS_LIST_SUCCESSFULLY =
   'get the transaction list successfully.';
 export const SOMETHING_IS_WRONG = 'Ops! something is wrong!please try later.';
+export const EDIT_NEW_TRANSACTION = 'Edit New Transaction';
+export const NEW_TRANSACTION_ADDED_SUCCESSFULLY =
+  'new record added successfully.';

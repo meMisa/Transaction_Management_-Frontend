@@ -7,6 +7,12 @@ const urls = {
       method,
     };
   },
+  transactionById: (method, id) => {
+    return {
+      url: `/transaction-management/transactions/${id}`,
+      method,
+    };
+  },
 };
 
 function api() {
@@ -15,6 +21,8 @@ function api() {
       Dispatch(urls.transaction('get'), {}, data.payload),
     postTransaction: (data) =>
       Dispatch(urls.transaction('post'), {}, data.payload),
+    getTransaction: (data) =>
+      Dispatch(urls.transactionById('get', data.params.id), {}, data.payload),
   };
 }
 

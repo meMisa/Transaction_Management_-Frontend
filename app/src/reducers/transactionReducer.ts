@@ -41,6 +41,9 @@ export function reducer(state: State, action: Action) {
       };
 
     case TransactionAction.POST_TRANSACTION_SUCCESS:
+      if (!action.payload.created_at) {
+        action.payload.created_at = new Date();
+      }
       return {
         ...state,
         transactions: [action.payload, ...state.transactions],

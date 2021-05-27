@@ -31,6 +31,7 @@ import {
   NEW_TRANSACTION,
   ADD_NEW_TRANSACTION,
   GET_THE_TRANSACTIONS_LIST_SUCCESSFULLY,
+  NEW_TRANSACTION_ADDED_SUCCESSFULLY,
 } from 'constants/texts';
 // styles
 import 'styles/transactions.css';
@@ -52,6 +53,7 @@ const TransactionPage: React.FC = () => {
       .then((response: NewTransactionResponse) => {
         modalRef.current.setSpin(false);
         toggle('');
+        showSuccessNotification(NEW_TRANSACTION_ADDED_SUCCESSFULLY);
         dispatch(createTransactionSuccess(response));
       })
       .catch((error) => {
@@ -64,7 +66,6 @@ const TransactionPage: React.FC = () => {
     transactionApis
       .getTransactionList({})
       .then((response: Transactions[]) => {
-        showSuccessNotification(GET_THE_TRANSACTIONS_LIST_SUCCESSFULLY);
         dispatch(fetchTransactionListSuccess(response));
       })
       .catch((error) => {
@@ -95,7 +96,7 @@ const TransactionPage: React.FC = () => {
         submitForm={submitNewTransaction}
         onCancel={toggle}
       >
-        <TransactionForm />
+        <TransactionForm mode="create" />
       </ModalForm>
       <TransactionListComponent transactions={state.transactions} />
     </>

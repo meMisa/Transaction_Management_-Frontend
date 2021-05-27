@@ -4,7 +4,7 @@ import { Form, Input, InputNumber } from 'antd';
 // texts
 import { ACCOUNT_ID, AMOUNT, THIS_FIELD_IS_REQUIRED } from 'constants/texts';
 
-const TransactionForm = () => {
+const TransactionForm = (props: { mode: string }) => {
   return (
     <>
       <Form.Item
@@ -23,6 +23,7 @@ const TransactionForm = () => {
           bordered={false}
           placeholder={ACCOUNT_ID}
           className="transaction-form-item"
+          disabled={props.mode === 'edit'}
         />
       </Form.Item>
       <Form.Item
@@ -42,6 +43,7 @@ const TransactionForm = () => {
           placeholder={AMOUNT}
           className="transaction-form-item"
           type="number"
+          disabled={props.mode === 'edit'}
         />
       </Form.Item>
     </>

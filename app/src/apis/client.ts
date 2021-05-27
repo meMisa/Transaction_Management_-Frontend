@@ -83,7 +83,9 @@ const self = function dispatch(urlInfo, params = null, payload = null) {
         } else {
           // if want to override so omit from here and go to reducers in error action part
           showErrorNotification(
-            formatErrorMessages(err.response && err.response.data.errors),
+            formatErrorMessages(
+              err.response.data.error || err.response.data.errors,
+            ),
           );
           reject(err.response);
         }

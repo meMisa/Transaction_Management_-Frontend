@@ -27,7 +27,7 @@ interface Props {
   size?: any;
   width?: number;
   visible: boolean;
-  submitForm: any;
+  submitForm?: any;
   onCancel: any;
   footer?: any;
   dataType: string;
