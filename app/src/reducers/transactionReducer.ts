@@ -5,6 +5,9 @@ export interface NewTransaction {
   account_id: string;
   amount: number;
 }
+export interface NewTransactionResponse extends NewTransaction {
+  transaction_id: string;
+}
 export interface Transactions extends NewTransaction {
   transaction_id: string;
   balance?: string;
@@ -33,6 +36,17 @@ export function reducer(state: State, action: Action) {
       return { ...state, transactions };
 
     case TransactionAction.GET_TRANSACTION_LIST_ERROR:
+      return {
+        ...state,
+      };
+
+    case TransactionAction.POST_TRANSACTION_SUCCESS:
+      return {
+        ...state,
+        transactions: [action.payload, ...state.transactions],
+      };
+
+    case TransactionAction.POST_TRANSACTION_ERROR:
       return {
         ...state,
       };

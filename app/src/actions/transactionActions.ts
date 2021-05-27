@@ -1,17 +1,38 @@
+import {
+  Transactions,
+  NewTransaction,
+  NewTransactionResponse,
+} from 'reducers/transactionReducer';
+
 export enum TransactionAction {
   GET_TRANSACTION_LIST_REQUEST = '@@transactions/GET_TRANSACTION_LIST_REQUEST',
   GET_TRANSACTION_LIST_SUCCESS = '@@users/GET_TRANSACTION_LIST_SUCCESS',
   GET_TRANSACTION_LIST_ERROR = '@@users/GET_TRANSACTION_LIST_ERROR',
+  POST_TRANSACTION_REQUEST = '@@transactions/POST_TRANSACTION_REQUEST',
+  POST_TRANSACTION_SUCCESS = '@@users/POST_TRANSACTION_SUCCESS',
+  POST_TRANSACTION_ERROR = '@@users/POST_TRANSACTION_ERROR',
 }
 
 export type Action =
   | { type: TransactionAction.GET_TRANSACTION_LIST_REQUEST }
   | {
       type: TransactionAction.GET_TRANSACTION_LIST_SUCCESS;
-      payload: any;
+      payload: Transactions[];
     }
   | {
       type: TransactionAction.GET_TRANSACTION_LIST_ERROR;
+      payload: any;
+    }
+  | {
+      type: TransactionAction.POST_TRANSACTION_REQUEST;
+      payload: NewTransaction;
+    }
+  | {
+      type: TransactionAction.POST_TRANSACTION_SUCCESS;
+      payload: any;
+    }
+  | {
+      type: TransactionAction.POST_TRANSACTION_ERROR;
       payload: any;
     };
 
@@ -25,4 +46,16 @@ export function fetchTransactionListSuccess(payload: any): Action {
 
 export function fetchTransactionListError(payload: any): Action {
   return { type: TransactionAction.GET_TRANSACTION_LIST_ERROR, payload };
+}
+
+export function createTransactionRequest(payload: NewTransaction): Action {
+  return { type: TransactionAction.POST_TRANSACTION_REQUEST, payload };
+}
+
+export function createTransactionSuccess(payload: any): Action {
+  return { type: TransactionAction.POST_TRANSACTION_SUCCESS, payload };
+}
+
+export function createTransactionError(payload: any): Action {
+  return { type: TransactionAction.POST_TRANSACTION_ERROR, payload };
 }

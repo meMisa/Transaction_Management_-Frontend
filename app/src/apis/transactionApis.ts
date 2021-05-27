@@ -1,7 +1,7 @@
 import Dispatch from 'apis/client';
 
 const urls = {
-  transactionList: (method) => {
+  transaction: (method) => {
     return {
       url: '/transaction-management/transactions',
       method,
@@ -12,7 +12,9 @@ const urls = {
 function api() {
   return {
     getTransactionList: (data) =>
-      Dispatch(urls.transactionList('get'), {}, data.payload),
+      Dispatch(urls.transaction('get'), {}, data.payload),
+    postTransaction: (data) =>
+      Dispatch(urls.transaction('post'), {}, data.payload),
   };
 }
 

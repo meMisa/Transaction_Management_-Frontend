@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { showErrorNotification } from 'utils/notifications';
+import { formatErrorMessages } from 'utils/utilities';
 
 export const BASE_URL = 'https://infra.devskills.app/api';
 
@@ -77,8 +79,12 @@ const self = function dispatch(urlInfo, params = null, payload = null) {
       })
       .catch((err) => {
         if (err.response && err.response.status === 401) {
-          // call refresh token for getting new access token
+          // call refresh token api for getting new access token
         } else {
+          // if want to override so omit from here and go to reducers in error action part
+          showErrorNotification(
+            formatErrorMessages(err.response && err.response.data.errors),
+          );
           reject(err.response);
         }
       });

@@ -21,7 +21,7 @@ const formItemLayout = {
 };
 
 interface Props {
-  initialValues;
+  initialValues: any;
   title: string;
   layout?: any;
   size?: any;
@@ -30,6 +30,7 @@ interface Props {
   submitForm: any;
   onCancel: any;
   footer?: any;
+  dataType: string;
   children: React.ReactNode | JSX.Element[] | JSX.Element;
 }
 
@@ -45,6 +46,7 @@ const ModalForm = React.forwardRef<JSX.Element, Props>(
       width,
       size,
       footer,
+      dataType,
     },
     ref,
   ) => {
@@ -97,6 +99,7 @@ const ModalForm = React.forwardRef<JSX.Element, Props>(
           size={size}
           name="subscription"
           onFinish={onFinish}
+          data-type={dataType}
           scrollToFirstError
         >
           {children}
