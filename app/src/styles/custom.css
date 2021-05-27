@@ -1,0 +1,341 @@
+body {
+  background: #f7f7f7;
+}
+
+#root > .ant-layout {
+  height: 100vh;
+  overflow: hidden;
+}
+
+/*Mobiles Size xs */
+@media (min-width: 320px) {
+  .error-alert {
+    width: 70%;
+  }
+}
+
+/*Mobiles Size xs */
+@media (min-width: 480px) {
+  .error-alert {
+    width: 71%;
+  }
+}
+
+/*Mobiles Size sm */
+@media (min-width: 576px) {
+  .error-alert {
+    width: 71%;
+  }
+}
+
+/*Tablet Landscape Size md */
+@media (min-width: 768px) {
+  .error-alert {
+    width: 71%;
+  }
+}
+
+/*Laptop Size large lg */
+@media (min-width: 992px) {
+  .error-alert {
+    width: 30%;
+  }
+}
+
+/*Large Monitor Size xl */
+@media (min-width: 1200px) {
+  .error-alert {
+    width: 30%;
+  }
+}
+
+/*X Large Monitor Size xxl */
+@media (min-width: 1600px) {
+  .error-alert {
+    width: 30%;
+  }
+}
+
+/*************************** Override ant styles classes *******************************/
+
+.register-card-layout .ant-card-actions {
+  border-top: none;
+}
+
+.register-card-layout .ant-card-actions > li:not(:last-child) {
+  border-right: none;
+}
+
+.register-card-layout .ant-btn:hover,
+.register-card-layout .ant-btn:focus {
+  color: initial;
+  background: #ececec;
+}
+
+.ant-layout {
+  background: #f7f7f7;
+  /*overflow-y: hidden;*/
+}
+
+.loading-progress .ant-progress-inner.ant-progress-circle-gradient {
+  width: 20rem !important;
+  height: 20rem !important;
+}
+
+.ant-notification-notice-description {
+  color: #6f6f6f;
+}
+
+.error-alert {
+  background: #ff3b30;
+  padding: 0 0 0 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.warning-alert {
+  background: #ffc021;
+}
+
+.success-alert {
+  background: #26bb50;
+  padding: 0 0 0 15px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.info-alert {
+  background: #007aff;
+}
+
+.ant-notification-notice-content {
+  background: white;
+  padding: 14px;
+}
+
+.ant-notification {
+  width: 100%;
+}
+
+/*************************** Bootstrap general classes *******************************/
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none !important;
+}
+
+.margin-auto {
+  margin: auto;
+}
+
+.font-style-italic {
+  font-style: italic;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.position-absolute {
+  position: absolute;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.flex-direction-col {
+  flex-direction: column;
+}
+
+.flex-direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.justify-content-space-between {
+  justify-content: space-between;
+}
+
+.justify-content-space-around {
+  justify-content: space-around;
+}
+
+.justify-content-space-evenly {
+  justify-content: space-evenly;
+}
+
+.object-fit {
+  object-fit: contain;
+}
+
+.z-index {
+  z-index: 1;
+}
+
+.font-weight-bold {
+  font-weight: bold !important;
+}
+
+.direction-rtl {
+  direction: rtl;
+}
+
+.direction-ltr {
+  direction: ltr;
+}
+
+.margin-top-1 {
+  margin-top: 1rem;
+}
+
+.margin-bottom-1 {
+  margin-bottom: 1rem;
+}
+
+.margin-left-1 {
+  margin-left: 1rem;
+}
+
+.margin-right-1 {
+  margin-right: 1rem;
+}
+
+.margin-left-2 {
+  margin-left: 2rem;
+}
+
+.margin-right-2 {
+  margin-right: 2rem;
+}
+
+.margin-right-3 {
+  margin-right: 3rem;
+}
+
+.margin-left-3 {
+  margin-left: 3rem;
+}
+
+.padding-1 {
+  padding: 1rem;
+}
+
+.padding-2 {
+  padding: 2rem;
+}
+
+.over-flow-x {
+  overflow-x: auto;
+}
+
+/*************************** Colors *******************************/
+.description-color {
+  color: #aeaeb0;
+}
+
+.sidebar-color {
+  color: #999999;
+}
+
+.disable-text-color {
+  color: #c6c6c6 !important;
+}
+
+.sidebar-active-color {
+  color: #fa5400;
+}
+
+.white-color {
+  color: white !important;
+}
+
+.red-color {
+  color: red;
+}
+
+/*************************** Other classes for components *******************************/
+.margin-right {
+  margin-right: 1rem;
+}
+
+.site-card-border-less-wrapper {
+  /*padding-top: 5%;*/
+}
+
+[data-theme='dark'] .site-card-border-less-wrapper {
+  background: #303030;
+}
+
+.ant-card-actions li {
+  width: 100% !important;
+}
+
+.facebook-login {
+  background: #4267b2;
+  height: 3rem;
+}
+
+.linkedin-login {
+  background: #0e76a8;
+  height: 3rem;
+}
+
+.login-icons {
+  font-size: 30px;
+}
+
+.header-logo-clexi {
+  padding: 1rem;
+}
+
+.profile-dropdown-arrow {
+  margin-left: 0.5rem;
+  font-size: 1em !important;
+}
+
+.menu-profile-wrap {
+  padding: 0.5rem;
+}
+
+.footer-heart {
+  margin-right: 0.5rem;
+}
+
+.sidebar-wrap {
+  border-right: 1px solid lightgrey;
+}
+
+.loading-wrapper {
+  padding-top: 3rem;
+}
+
+.loading-progress {
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+}
+
+.card-number {
+  width: -webkit-fill-available;
+}
