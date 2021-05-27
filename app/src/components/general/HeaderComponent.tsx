@@ -26,7 +26,6 @@ const HeaderComponent = () => {
       <Popover content={contetnt} trigger="click" placement="topRight">
         <Avatar
           size={'large'}
-          // Popover
           icon={<UserOutlined />}
           src={profile_icon}
           className="cursor-pointer"

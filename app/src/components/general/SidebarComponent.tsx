@@ -31,7 +31,7 @@ const SidebarComponent = () => {
           className="text-align-center"
           title={
             <img
-              className="margin-auto clexi-logo-sidebar"
+              className="margin-auto mentimeter-logo-sidebar"
               alt="clexi"
               src={mentimeter_logo}
             />
@@ -53,7 +53,7 @@ const SidebarComponent = () => {
           onCollapse={handleCollapse}
         >
           <img
-            className="margin-auto clexi-logo-sidebar"
+            className="margin-auto mentimeter-logo-sidebar"
             alt="clexi"
             src={mentimeter_logo}
           />

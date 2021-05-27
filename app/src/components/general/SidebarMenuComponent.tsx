@@ -24,8 +24,8 @@ const SidebarMenuComponent = () => {
               <TransactionOutlined
                 className={`${
                   pathName === '/transactions'
-                    ? 'active-sidebar-icon-upgrade'
-                    : 'upgrade-version'
+                    ? 'active-sidebar-icon-transaction'
+                    : 'transaction'
                 }`}
               />
             </Col>
@@ -56,8 +56,8 @@ const SidebarMenuComponent = () => {
               <SettingOutlined
                 className={`${
                   pathName === '/settings'
-                    ? 'active-sidebar-icon-upgrade'
-                    : 'upgrade-version'
+                    ? 'active-sidebar-icon-transaction'
+                    : 'transaction'
                 }`}
               />
             </Col>

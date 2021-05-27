@@ -15,7 +15,6 @@
 }
 
 .sidebar-wrapper {
-  /*margin: 0 30px 0 0;*/
   padding-top: 65.5px;
   box-shadow: 0 3px 45px 0 rgba(0, 0, 0, 0.08);
   background: #ffffff !important;
@@ -36,7 +35,7 @@
 }
 
 /*************************** Menu styles *******************************/
-.clexi-logo-sidebar {
+.mentimeter-logo-sidebar {
   width: 50%;
 }
 
@@ -58,19 +57,19 @@
 }
 
 .sidebar-menu:hover .sidebar-icon,
-.sidebar-menu:hover .upgrade-version,
+.sidebar-menu:hover .transaction,
 .sidebar-menu:hover .sidebar-color {
   background: none !important;
   fill: #707070;
   color: #707070 !important;
 }
 
-.upgrade-version {
+.transaction {
   font-size: 1.8rem !important;
   color: #999 !important;
 }
 
-.active-sidebar-icon-upgrade {
+.active-sidebar-icon-transaction {
   font-size: 1.8rem !important;
   color: #fa5400 !important;
 }

@@ -74,12 +74,6 @@ body {
 
 .ant-layout {
   background: #f7f7f7;
-  /*overflow-y: hidden;*/
-}
-
-.loading-progress .ant-progress-inner.ant-progress-circle-gradient {
-  width: 20rem !important;
-  height: 20rem !important;
 }
 
 .ant-notification-notice-description {
@@ -280,62 +274,10 @@ body {
   margin-right: 1rem;
 }
 
-.site-card-border-less-wrapper {
-  /*padding-top: 5%;*/
-}
-
 [data-theme='dark'] .site-card-border-less-wrapper {
   background: #303030;
 }
 
-.ant-card-actions li {
-  width: 100% !important;
-}
-
-.facebook-login {
-  background: #4267b2;
-  height: 3rem;
-}
-
-.linkedin-login {
-  background: #0e76a8;
-  height: 3rem;
-}
-
-.login-icons {
-  font-size: 30px;
-}
-
-.header-logo-clexi {
-  padding: 1rem;
-}
-
-.profile-dropdown-arrow {
-  margin-left: 0.5rem;
-  font-size: 1em !important;
-}
-
-.menu-profile-wrap {
-  padding: 0.5rem;
-}
-
-.footer-heart {
-  margin-right: 0.5rem;
-}
-
 .sidebar-wrap {
   border-right: 1px solid lightgrey;
-}
-
-.loading-wrapper {
-  padding-top: 3rem;
-}
-
-.loading-progress {
-  margin-top: 5rem;
-  margin-bottom: 3rem;
-}
-
-.card-number {
-  width: -webkit-fill-available;
 }

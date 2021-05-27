@@ -5,7 +5,7 @@ import { Layout } from 'antd';
 import HeaderComponent from 'components/general/HeaderComponent';
 import SidebarComponent from 'components/general/SidebarComponent';
 
-const { Content, Footer } = Layout;
+const { Content } = Layout;
 
 const DashboardLayout = ({ children }) => {
   return (
@@ -22,7 +22,6 @@ const DashboardLayout = ({ children }) => {
         >
           {children}
         </Content>
-        {/*<Footer className="text-align-center"></Footer>*/}
       </Layout>
     </Layout>
   );

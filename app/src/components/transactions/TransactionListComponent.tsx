@@ -17,7 +17,7 @@ const TransactionListComponent = (props: { transactions: Transactions[] }) => {
             avatar={
               <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
             }
-            title={<a href="https://ant.design">{item.account_id}</a>}
+            title={<a href="">{item.account_id}</a>}
             description={
               <div
                 data-type="transaction"
