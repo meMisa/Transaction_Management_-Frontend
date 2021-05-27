@@ -1,20 +1,24 @@
 // actions
 import { Action, TransactionAction } from 'actions/transactionActions';
 
-export interface Transactions {
+export interface NewTransaction {
   account_id: string;
-  transaction_id: string;
   amount: number;
-  balance: string;
+}
+export interface Transactions extends NewTransaction {
+  transaction_id: string;
+  balance?: string;
   created_at: string;
 }
 
 export interface State {
   transactions: Transactions[];
+  newTransaction: NewTransaction;
 }
 
 export const initialState: State = {
   transactions: [],
+  newTransaction: { account_id: '', amount: 0 },
 };
 
 export function reducer(state: State, action: Action) {
