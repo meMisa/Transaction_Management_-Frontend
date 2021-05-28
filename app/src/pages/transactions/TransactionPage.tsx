@@ -1,6 +1,6 @@
 // node modules
 import * as React from 'react';
-import { Button } from 'antd';
+import { Button, Typography } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
 // components :
 import TransactionListComponent from 'components/transactions/TransactionListComponent';
@@ -30,7 +30,6 @@ import { showSuccessNotification } from 'utils/notifications';
 import {
   NEW_TRANSACTION,
   ADD_NEW_TRANSACTION,
-  GET_THE_TRANSACTIONS_LIST_SUCCESSFULLY,
   NEW_TRANSACTION_ADDED_SUCCESSFULLY,
 } from 'constants/texts';
 // styles
