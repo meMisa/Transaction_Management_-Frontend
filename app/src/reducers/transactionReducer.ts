@@ -12,6 +12,7 @@ export interface Transactions extends NewTransaction {
   transaction_id: string;
   balance?: string;
   created_at: string;
+  newRecord?: boolean;
 }
 
 export interface State {
@@ -43,6 +44,7 @@ export function reducer(state: State, action: Action) {
     case TransactionAction.POST_TRANSACTION_SUCCESS:
       if (!action.payload.created_at) {
         action.payload.created_at = new Date();
+        action.payload.newRecord = true;
       }
       return {
         ...state,

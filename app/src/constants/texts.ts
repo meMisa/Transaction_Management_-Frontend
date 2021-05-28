@@ -15,3 +15,4 @@ export const SOMETHING_IS_WRONG = 'Ops! something is wrong!please try later.';
 export const EDIT_NEW_TRANSACTION = 'View the Transaction';
 export const NEW_TRANSACTION_ADDED_SUCCESSFULLY =
   'new record added successfully.';
+export const BALANCE = 'Balance:';

@@ -3,6 +3,7 @@ import { showErrorNotification } from 'utils/notifications';
 import { formatErrorMessages } from 'utils/utilities';
 
 export const BASE_URL = 'https://infra.devskills.app/api';
+export const CURRENT_USER = 'a31a9c62-001b-40c5-8903-48318555b4e7';
 
 const requestConfig: any = {
   method: 'get',

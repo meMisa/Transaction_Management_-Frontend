@@ -23,8 +23,8 @@ const TransactionListComponent = (props: { transactions: Transactions[] }) => {
     transactionApis
       .getTransaction({ params: { id: transaction.transaction_id } })
       .then((response) => {
-        toggle('edit-transaction');
         setSelectedTransaction(response);
+        toggle('edit-transaction');
       })
       .catch((error) => {});
   }, []);
