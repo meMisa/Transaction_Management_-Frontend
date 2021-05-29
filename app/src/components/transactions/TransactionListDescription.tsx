@@ -7,6 +7,7 @@ import { Transactions } from 'reducers/transactionReducer';
 import { formatDate } from 'utils/utilities';
 // context
 import { UserDetailContext } from 'components/layouts/TransactionLayout';
+import { List } from 'antd';
 
 const TransactionListDescription = ({
   account_id,
@@ -29,7 +30,7 @@ const TransactionListDescription = ({
   };
 
   return (
-    <>
+    <div data-testid="transaction-list-description">
       {accountInfo.account_id && (
         <div
           data-type="transaction"
@@ -46,7 +47,7 @@ const TransactionListDescription = ({
           )}
         </div>
       )}
-    </>
+    </div>
   );
 };
 

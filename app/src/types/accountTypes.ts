@@ -1,4 +1,4 @@
-export interface AccountInfo {
-  account_id?: string;
-  balance?: number;
+export interface AccountInfoI {
+  account_id: string;
+  balance: number;
 }

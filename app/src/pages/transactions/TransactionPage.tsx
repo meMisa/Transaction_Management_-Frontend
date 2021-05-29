@@ -26,8 +26,6 @@ import {
 import useModal from 'hooks/useModal';
 // utils
 import { showSuccessNotification } from 'utils/notifications';
-// context
-import { UserDetailContext } from 'components/layouts/TransactionLayout';
 // texts
 import {
   NEW_TRANSACTION,

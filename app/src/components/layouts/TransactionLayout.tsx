@@ -4,32 +4,21 @@ import { Layout } from 'antd';
 // components
 import HeaderComponent from 'components/general/HeaderComponent';
 import SidebarComponent from 'components/general/SidebarComponent';
-// apis
-import accountApis from 'apis/accountApis';
-import { CURRENT_USER } from 'apis/client';
-// types
-import { AccountInfo } from 'types/accountTypes';
+// hooks
+import useAccountInfo from '../../hooks/useAccountInfo';
 
-export const UserDetailContext = React.createContext(null);
+const AccountInfo = {
+  account_id: '',
+  balance: 0,
+};
+export const UserDetailContext = React.createContext(AccountInfo);
 
 const { Content } = Layout;
 
 const TransactionLayout = ({ children }) => {
   // ************************************************* State **********************************************************
-  const [userInfo, setUserInfo] = React.useState<AccountInfo>({
-    account_id: '',
-    balance: 0,
-  });
+  const { userInfo } = useAccountInfo();
 
-  // ************************************************* Use Effect *****************************************************
-  React.useEffect(() => {
-    accountApis
-      .getAccount({ params: { id: CURRENT_USER } })
-      .then((response: AccountInfo) => {
-        setUserInfo(response);
-      })
-      .catch((error) => {});
-  }, []);
   return (
     <UserDetailContext.Provider value={userInfo}>
       <Layout hasSider className="site-layout-background">

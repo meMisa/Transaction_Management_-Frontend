@@ -10,7 +10,7 @@ export interface NewTransactionResponse extends NewTransaction {
 }
 export interface Transactions extends NewTransaction {
   transaction_id: string;
-  balance?: string;
+  balance?: number;
   created_at: string;
   newRecord?: boolean;
 }

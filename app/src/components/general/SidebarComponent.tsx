@@ -25,7 +25,7 @@ const SidebarComponent = () => {
   };
 
   return (
-    <>
+    <div data-testid="sidebar">
       {visibleDrawer ? (
         <Drawer
           className="text-align-center"
@@ -60,7 +60,7 @@ const SidebarComponent = () => {
           <SidebarMenuComponent />
         </Sider>
       )}
-    </>
+    </div>
   );
 };
 

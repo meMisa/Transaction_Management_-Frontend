@@ -2,10 +2,8 @@
 import * as React from 'react';
 import { Layout, Avatar, Typography, Popover } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
-// apis
-import { CURRENT_USER } from 'apis/client';
 // types
-import { AccountInfo } from 'types/accountTypes';
+import { AccountInfoI } from 'types/accountTypes';
 // images
 import profile_icon from 'assets/images/profile_icon.png';
 // texts
@@ -16,7 +14,7 @@ import 'styles/header.css';
 const { Header } = Layout;
 const { Text, Title } = Typography;
 
-const HeaderComponent = ({ account_id, balance }: AccountInfo) => {
+const HeaderComponent = ({ account_id, balance }: AccountInfoI) => {
   const contetnt = (
     <div className="text-align-center padding-1">
       <Avatar size={64} icon={<UserOutlined />} src={profile_icon} />
@@ -33,7 +31,7 @@ const HeaderComponent = ({ account_id, balance }: AccountInfo) => {
   );
 
   return (
-    <Header className="header direction-rtl">
+    <Header className="header direction-rtl" data-testid="header">
       <Popover content={contetnt} trigger="click" placement="topRight">
         <Avatar
           size={'large'}
