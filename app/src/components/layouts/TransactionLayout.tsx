@@ -5,7 +5,7 @@ import { Layout } from 'antd';
 import HeaderComponent from 'components/general/HeaderComponent';
 import SidebarComponent from 'components/general/SidebarComponent';
 // hooks
-import useAccountInfo from '../../hooks/useAccountInfo';
+import useAccountInfo from 'hooks/useAccountInfo';
 
 const AccountInfo = {
   account_id: '',

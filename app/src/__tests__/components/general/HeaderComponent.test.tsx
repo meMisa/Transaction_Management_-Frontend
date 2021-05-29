@@ -3,7 +3,6 @@ import { render, screen, cleanup, fireEvent } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 
 import HeaderComponent from 'components/general/HeaderComponent';
-import { BALANCE } from 'constants/texts';
 
 const userInfo = {
   account_id: 'a31a9c62-001b-40c5-8903-48318555b4e7',
@@ -32,16 +31,6 @@ describe('Test', () => {
     expect(headerComponent).toBeInTheDocument();
     expect(headerComponent).toHaveTextContent('');
     expect(headerComponent).toContainHTML('<img src="profile_icon.png" />');
-  });
-
-  it('Text in state is changed when button clicked', () => {
-    const { getByText } = render(<HeaderComponent {...userInfo} />);
-
-    // expect(getByText(BALANCE).textContent).toBe(BALANCE)
-
-    // fireEvent.click(getByText("State Change Button"))
-    //
-    // expect(getByText(/Initial/i).textContent).toBe("Initial State Changed")
   });
 
   test('match snapshot', () => {

@@ -7,7 +7,6 @@ import { Transactions } from 'reducers/transactionReducer';
 import { formatDate } from 'utils/utilities';
 // context
 import { UserDetailContext } from 'components/layouts/TransactionLayout';
-import { List } from 'antd';
 
 const TransactionListDescription = ({
   account_id,
@@ -16,8 +15,10 @@ const TransactionListDescription = ({
   created_at,
   newRecord,
 }: Transactions) => {
+  // ************************************************* State **********************************************************
   const accountInfo = React.useContext(UserDetailContext);
 
+  // ************************************************* FUNCTIONS ******************************************************
   const isCurrentUser = () => {
     return accountInfo.account_id === account_id || newRecord;
   };
@@ -33,7 +34,7 @@ const TransactionListDescription = ({
     <div data-testid="transaction-list-description">
       {accountInfo.account_id && (
         <div
-          data-type="transaction"
+          datatype="transaction"
           data-account-id={account_id}
           data-amount={amount}
           data-balance={balance}
