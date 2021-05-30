@@ -1,6 +1,6 @@
 // node modules
 import * as React from 'react';
-import { Button, Typography } from 'antd';
+import { Button } from 'antd';
 import { PlusCircleOutlined } from '@ant-design/icons';
 // components :
 import TransactionListComponent from 'components/transactions/TransactionListComponent';

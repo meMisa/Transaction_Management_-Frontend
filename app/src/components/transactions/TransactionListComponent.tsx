@@ -1,6 +1,6 @@
 // node modules
 import * as React from 'react';
-import { List, Avatar, Typography } from 'antd';
+import { List, Avatar, Typography, Menu } from 'antd';
 import { EyeOutlined } from '@ant-design/icons';
 // components
 import TransactionForm from './TransactionForm';
@@ -16,9 +16,15 @@ import transactionApis from 'apis/transactionApis';
 import { EDIT_NEW_TRANSACTION, ITEMS } from 'constants/texts';
 
 const TransactionListComponent = (props: { transactions: Transactions[] }) => {
+  {
+    /**************************************************** STATES ******************************************************/
+  }
   const [selectedTransaction, setSelectedTransaction] = React.useState(null);
   const { isShowing, toggle } = useModal();
 
+  {
+    /************************************************* FUNCTIONS ******************************************************/
+  }
   const getSelectedTransaction = React.useCallback((transaction) => {
     transactionApis
       .getTransaction({ params: { id: transaction.transaction_id } })
@@ -30,14 +36,17 @@ const TransactionListComponent = (props: { transactions: Transactions[] }) => {
   }, []);
 
   return (
-    <>
+    <div
+      data-testid="transaction-list-component"
+      className="transaction-list-wrapper"
+    >
       <List
         header={
           <Typography.Title level={3}>
             {props.transactions.length} {ITEMS}
           </Typography.Title>
         }
-        className="padding-2 transaction-list-wrapper"
+        className="padding-2"
         loading={!props.transactions.length}
         itemLayout="horizontal"
         dataSource={props.transactions}
@@ -45,6 +54,8 @@ const TransactionListComponent = (props: { transactions: Transactions[] }) => {
           <List.Item
             actions={[
               <EyeOutlined
+                title="view"
+                data-testid={item.transaction_id}
                 className="cursor-pointer"
                 onClick={() => getSelectedTransaction(item)}
               />,
@@ -72,7 +83,7 @@ const TransactionListComponent = (props: { transactions: Transactions[] }) => {
       >
         <TransactionForm mode="edit" />
       </ModalForm>
-    </>
+    </div>
   );
 };
 

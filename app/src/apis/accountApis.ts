@@ -1,7 +1,7 @@
 import Dispatch from 'apis/client';
 
 const urls = {
-  accountById: (method, id) => {
+  accountById: (method: string, id: string) => {
     return {
       url: `/transaction-management/accounts/${id}`,
       method,
@@ -11,7 +11,7 @@ const urls = {
 
 function api() {
   return {
-    getAccount: (data) =>
+    getAccount: (data: any) =>
       Dispatch(urls.accountById('get', data.params.id), {}, data.payload),
   };
 }

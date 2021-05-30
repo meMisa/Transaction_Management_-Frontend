@@ -6,7 +6,7 @@ import { ACCOUNT_ID, AMOUNT, THIS_FIELD_IS_REQUIRED } from 'constants/texts';
 
 const TransactionForm = (props: { mode: string }) => {
   return (
-    <>
+    <div data-testid="transaction-form">
       <Form.Item
         label={ACCOUNT_ID}
         name="account_id"
@@ -46,7 +46,7 @@ const TransactionForm = (props: { mode: string }) => {
           disabled={props.mode === 'edit'}
         />
       </Form.Item>
-    </>
+    </div>
   );
 };
 

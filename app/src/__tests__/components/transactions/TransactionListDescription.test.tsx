@@ -15,7 +15,7 @@ const item: Transactions = {
   newRecord: false,
 };
 
-beforeEach(() => {
+afterEach(() => {
   cleanup();
 });
 

@@ -1,13 +1,13 @@
 import Dispatch from 'apis/client';
 
 const urls = {
-  transaction: (method) => {
+  transaction: (method: string) => {
     return {
       url: '/transaction-management/transactions',
       method,
     };
   },
-  transactionById: (method, id) => {
+  transactionById: (method: string, id: string) => {
     return {
       url: `/transaction-management/transactions/${id}`,
       method,
