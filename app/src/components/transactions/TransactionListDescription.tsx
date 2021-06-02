@@ -31,13 +31,13 @@ const TransactionListDescription = ({
   };
 
   return (
-    <>
+    <div data-testid="transaction-list-description">
       {accountInfo.account_id && (
         <div
-          // data-type="transaction"
-          // data-account-id={account_id}
-          // data-amount={amount}
-          // data-balance={balance}
+          data-type="transaction"
+          data-account-id={account_id}
+          data-amount={amount}
+          data-balance={balance}
         >
           {makeDetails()}
           <br />
@@ -48,7 +48,7 @@ const TransactionListDescription = ({
           )}
         </div>
       )}
-    </>
+    </div>
   );
 };
 
