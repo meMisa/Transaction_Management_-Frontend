@@ -1,0 +1,13 @@
+.transaction-list-wrapper {
+  height: 100%;
+  overflow: auto;
+}
+.transaction-form-item,
+.transaction-form-item:hover,
+.transaction-form-item:visited,
+.transaction-form-item:focus {
+  width: 100%;
+  border-radius: 14px !important;
+  background-color: rgba(0, 0, 0, 0.03) !important;
+  padding: 1rem;
+}

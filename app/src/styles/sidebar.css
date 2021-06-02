@@ -1,0 +1,75 @@
+/*Mobiles Size*/
+@media (min-width: 320px) {
+  .sidebar-wrapper {
+    height: calc(1vh * 100 - 11rem);
+  }
+}
+
+/*************************** Override ant styles *******************************/
+.ant-menu-item-selected {
+  background: none !important;
+}
+
+.ant-menu-item-selected:after {
+  border-right: none !important;
+}
+
+.sidebar-wrapper {
+  padding-top: 65.5px;
+  box-shadow: 0 3px 45px 0 rgba(0, 0, 0, 0.08);
+  background: #ffffff !important;
+  border-radius: 0 4rem 4rem 0;
+  height: calc(1vh * 100);
+}
+
+.ant-drawer-content {
+  border-radius: 0 1rem 1rem 0;
+  padding-top: 15px;
+}
+
+.ant-layout-sider-zero-width-trigger {
+  top: 44px !important;
+  right: -64px !important;
+  font-size: 25px !important;
+  width: 40px !important;
+}
+
+/*************************** Menu styles *******************************/
+.mentimeter-logo-sidebar {
+  width: 50%;
+}
+
+.sidebar-icon-common {
+  height: 2rem;
+}
+
+.sidebar-icon {
+  fill: #999;
+}
+
+.active-sidebar-icon {
+  fill: #fa5400;
+}
+
+.sidebar-menu {
+  margin-top: 2rem !important;
+  display: inherit !important;
+}
+
+.sidebar-menu:hover .sidebar-icon,
+.sidebar-menu:hover .transaction,
+.sidebar-menu:hover .sidebar-color {
+  background: none !important;
+  fill: #707070;
+  color: #707070 !important;
+}
+
+.transaction {
+  font-size: 1.8rem !important;
+  color: #999 !important;
+}
+
+.active-sidebar-icon-transaction {
+  font-size: 1.8rem !important;
+  color: #fa5400 !important;
+}

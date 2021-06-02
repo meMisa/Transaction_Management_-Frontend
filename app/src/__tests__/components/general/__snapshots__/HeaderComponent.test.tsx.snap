@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test match snapshot 1`] = `
+<header
+  className="ant-layout-header header direction-rtl"
+  data-testid="header"
+>
+  <span
+    className="ant-avatar ant-avatar-lg ant-avatar-circle ant-avatar-image ant-avatar-icon cursor-pointer"
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    onTouchStart={[Function]}
+    style={Object {}}
+  >
+    <img
+      onError={[Function]}
+      src="profile_icon.png"
+    />
+  </span>
+</header>
+`;
