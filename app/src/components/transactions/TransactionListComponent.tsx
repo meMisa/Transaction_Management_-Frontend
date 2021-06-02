@@ -41,31 +41,31 @@ const TransactionListComponent = (props: { transactions: Transactions[] }) => {
       className="transaction-list-wrapper"
     >
       <List
-        header={
-          <Typography.Title level={3}>
-            {props.transactions.length} {ITEMS}
-          </Typography.Title>
-        }
+        // header={
+        //   <Typography.Title level={3}>
+        //     {props.transactions.length} {ITEMS}
+        //   </Typography.Title>
+        // }
         className="padding-2"
         loading={!props.transactions.length}
         itemLayout="horizontal"
         dataSource={props.transactions}
         renderItem={(item) => (
           <List.Item
-            actions={[
-              <EyeOutlined
-                title="view"
-                data-testid={item.transaction_id}
-                className="cursor-pointer"
-                onClick={() => getSelectedTransaction(item)}
-              />,
-            ]}
+            // actions={[
+            //   <EyeOutlined
+            //     title="view"
+            //     data-testid={item.transaction_id}
+            //     className="cursor-pointer"
+            //     onClick={() => getSelectedTransaction(item)}
+            //   />,
+            // ]}
           >
             <List.Item.Meta
-              avatar={
-                <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
-              }
-              title={<a>{item.transaction_id}</a>}
+              // avatar={
+              //   <Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />
+              // }
+              // title={<a>{item.transaction_id}</a>}
               description={<TransactionListDescription {...item} />}
             />
           </List.Item>
